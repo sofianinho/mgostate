@@ -2,7 +2,7 @@
 ```
 ./mgostate 
 mgostate. 
-   Helps you test mongodb parameters (like the existance of a database or a collection) from the shell.
+   Helps you test mongodb parameters (like the existence of a database or a collection) from the shell.
 
 Usage:
   mgostate [command]
@@ -25,12 +25,12 @@ Use "mgostate [command] --help" for more information about a command.
 The result is a dynamically linked executable. This usually means that a cgo/c code is nested in there.
 This could be: "gopkg.in/mgo.v2" or "github.com/spf13/cobra" (probably mgo.v2). It may be, for example, due to the use of DNS resolution (or other).
 ```
-go build ./mgodb.go
+go build ./mgostate.go
 ```
 ### Static compilation
 To get a statically linked program rather than a dynamically linked one, you need to tell the go compiler not to link to the system's C library.
 ```
-CGO_ENABLED=0 go build ./mgodb.go
+CGO_ENABLED=0 go build ./mgostate.go
 ```
 ### Docker
 This folder contains the files necessary to create a dockerized image of the software. The image used is a "scratch" as the executable is statically
