@@ -34,10 +34,17 @@ CGO_ENABLED=0 go build ./mgostate.go
 ```
 ### Docker
 This folder contains the files necessary to create a dockerized image of the software. The image used is a "scratch" as the executable is statically
-linked and does not a bash environement to make sense of its libraries. Read further [here](http://blog.oddbit.com/2015/02/05/creating-minimal-docker-images/).
+linked and does not need a bash environement to make sense of its libraries. Read further [here](http://blog.oddbit.com/2015/02/05/creating-minimal-docker-images/).
 You can also use this version of the software from my dockerhub repo. You can then append you commands to the image name.
 ```
 docker run -t sofianinho/mgostate --help
 ```
-
-
+A good example to test the existence of your collection would be:
+- With docker
+```
+docker run -t sofianinho/mgostate state -u mongodb://localhost:27017 -d myDatabase -c myCollection
+```
+- Without docker
+```
+./mgostate state -u mongodb://localhost:27017 -d myDatabase -c myCollection
+```
