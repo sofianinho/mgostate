@@ -2,7 +2,7 @@ package commands
 
 import (
  "log"
- "github.com/sofiane/mgostate/mgodb"
+ "github.com/sofianinho/mgostate/mgodb"
  "github.com/spf13/cobra"
  "os"
 )
