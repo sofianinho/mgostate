@@ -1,6 +1,6 @@
 package main
 
-import "github.com/sofiane/mgostate/commands"
+import "github.com/sofianinho/mgostate/commands"
 
 
 func main() {
